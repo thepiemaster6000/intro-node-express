@@ -17,6 +17,8 @@ app.get('/blog', function(req, res) {
     res.sendFile(__dirname+'/views/blog.html');
 });
 
+app.use('/static', express.static('views'))
+
 app.get('/getMessage', function(req, res) {
     res.status(200).send('this is a message from our backend service!');
 });
